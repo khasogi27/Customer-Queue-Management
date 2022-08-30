@@ -1,40 +1,37 @@
-<div fxLayout="column" fxLayoutGap="8px">
-  <button mat-raised-button style="background: slateblue" (click)="changePage('request-queue-number')"> Print Queue Number </button>
-  <button mat-raised-button style="background: green" (click)="changePage('input-visitor-details')"> Input Visitor Details </button>
-  <button mat-raised-button style="background: orange" (click)="changePage('visitor-list')"> Visitor List </button>
-</div>
-<div>
-  <h1> TASKS </h1>
-  <p>
-    This task requires you to create an application to be used in a hospital. A "Customer Queue Management" for walk-in customer.
+<div class="container-menu">
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+      (click)="onSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="menu-title">Customer Queue Management</span>
+    <span style="flex: auto 1 1;"></span>
+    <span class="menu-date">{{ newDate }} • {{ newTime | date:'mediumTime' }}</span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>bug_report</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>live_help</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon (mouseover)="changeText=true" (mouseout)="changeText=false">person</mat-icon>
+    </button>
+    <span *ngIf="changeText" class="menu-person">{{ userName }}</span>
+  </mat-toolbar>
 
-    -- FRONTEND - ANGULAR --
-    This angular app includes a page to input visitors' details and a page to show a list of visitors' details.
-    All 3 pages are still blanks thus you need to design and code from ground-up.
-    <br>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav>
+      <mat-list *ngFor="let ls of listPath">
+        <button mat-button class="menu-button" (click)="onPath(ls.path)"><mat-icon>{{ ls.icon }}</mat-icon> {{ ls.name }}</button>
+      </mat-list>
+    </mat-sidenav>
 
-    Some Example For Visitor Details :
-    <br>
-    Print Queue (You can Make A Pop Up / HTML Print Using Simple Database)
-    <br>
-    <img src="./assets/img/barcodelist.PNG" alt="logo" style="width:500px; height:500px;">
-    <br>
-    Input Visitor
-    <br>
-    <img src="./assets/img/inputdata.PNG" alt="logo" style="width:700px; height:500px;">
-    <br>
-    Visitor List
-    <br>
-    <img src="./assets/img/visitorlist.PNG" alt="logo" style="width:700px; height:500px;">
-    <br>
-    -- API --
-    <br>
-    You Can Install API using Node Express and create localdatabase for gathering the data.
-    <br>
-    -- Database --
-    <br>
-    You Must Create Database Using MongoDb
-    <br>
-    Happy Creating!
-  </p>
+    <mat-sidenav-content>
+      <div class="m-2">
+        <mat-card>
+          <router-outlet></router-outlet>
+        </mat-card>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

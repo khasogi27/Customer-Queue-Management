@@ -16,7 +16,7 @@
 
 ### Visitor List
 
-![Visitor List](src/assets/img/inputdata.PNG)
+![Visitor List](src/assets/img/visitorlist.PNG)
 
 -- API --
 You Can Install API using Node Express and create localdatabase for gathering the data.

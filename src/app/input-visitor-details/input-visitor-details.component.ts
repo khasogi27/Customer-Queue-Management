@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputVisitorDetailsComponent implements OnInit {
 
+  public dsTabs: any = ['customer register', 'customer list', 'customer setting', 'customer register import'];
+
   constructor() { }
 
   ngOnInit(): void {
