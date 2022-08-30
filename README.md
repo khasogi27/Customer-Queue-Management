@@ -8,15 +8,15 @@
 
 ### Print Queue (You can Make A Pop Up / HTML Print Using Simple Database) 
 
-![Print Queue (You can Make A Pop Up / HTML Print Using Simple Database) ](./testing-app/src//assets/img/barcodelist.PNG)
+![Print Queue (You can Make A Pop Up / HTML Print Using Simple Database) ](./testing-app/src/assets/img/barcodelist.PNG)
 
 ### Input Visitor
 
-![Input Visitor](./testing-app/src//assets/img/inputdata.PNG)
+![Input Visitor](./testing-app/src/assets/img/inputdata.PNG)
 
 ### Visitor List
 
-![Visitor List](./testing-app/src//assets/img/visitorlist.PNG)
+![Visitor List](./testing-app/src/assets/img/visitorlist.PNG)
 
 -- API --
 You Can Install API using Node Express and create localdatabase for gathering the data.
