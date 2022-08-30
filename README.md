@@ -1,3 +1,29 @@
+# TASKS
+
+> This task requires you to create an application to be used in a hospital. 
+> A "Customer Queue Management" for walk-in customer. 
+> -- FRONTEND - ANGULAR -- This angular app includes a page to input visitors' details and a page to show a list of visitors' details. 
+> All 3 pages are still blanks thus you need to design and code from ground-up.
+> Some Example For Visitor Details :
+
+### Print Queue (You can Make A Pop Up / HTML Print Using Simple Database) 
+
+![Print Queue (You can Make A Pop Up / HTML Print Using Simple Database) ](./testing-app/src//assets/img/barcodelist.PNG)
+
+### Input Visitor
+
+![Input Visitor](./testing-app/src//assets/img/inputdata.PNG)
+
+### Visitor List
+
+![Visitor List](./testing-app/src//assets/img/visitorlist.PNG)
+
+-- API --
+You Can Install API using Node Express and create localdatabase for gathering the data.
+-- Database --
+You Must Create Database Using MongoDb
+Happy Creating! 
+
 # TestingApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
