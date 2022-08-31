@@ -13,9 +13,9 @@ export class MenuComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   public listPath: any = [
+    { name: 'Request queue', path: 'request-queue-number', icon: 'add_to_queue' },
     { name: 'Visitor list', path: 'visitor-list', icon: 'list_alt' },
     { name: 'Input visitor', path: 'input_visitor_details', icon: 'post_add' },
-    { name: 'Request queue', path: 'request-queue-number', icon: 'add_to_queue' },
     { name: 'Test case', path: 'test-case', icon: 'quiz' }
   ];
 

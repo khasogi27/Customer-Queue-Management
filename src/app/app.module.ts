@@ -15,6 +15,7 @@ import { CustomerService } from './services/customer.service';
 import { UserService } from './services/user.service';
 import { TestcaseComponent } from './testcase/testcase.component';
 import { CustomerRegisterComponent } from './input-visitor-details/customer-register/customer-register.component';
+import { NgxBarcodeModule } from 'ngx-barcode';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CustomerRegisterComponent } from './input-visitor-details/customer-regi
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxBarcodeModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

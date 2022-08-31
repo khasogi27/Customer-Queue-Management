@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-input-visitor-details',
@@ -9,9 +10,17 @@ export class InputVisitorDetailsComponent implements OnInit {
 
   public dsTabs: any = ['customer register', 'customer list', 'customer setting', 'customer register import'];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onBack() {
+    this.router.navigateByUrl('/');
+  }
+
+  onSave() {
+
   }
 
 }
