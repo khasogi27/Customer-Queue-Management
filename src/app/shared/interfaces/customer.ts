@@ -1,16 +1,18 @@
 export interface Customer {
-  salesman_id: number,
-  customer_name: string,
+  customerId: string
+  salesmanId: string,
+  customerName: string,
   pic: string,
   city: string,
   remark: string,
   npwp: string,
-  customer_price: string,
+  customerPrice: string,
   address: string,
-  address_2: string,
+  address2: string,
   contact: string,
   region: string,
   province: string,
-  pref_expedition: string,
+  kuota: string,
+  prefExpedition: string,
   createdAt: string
 }

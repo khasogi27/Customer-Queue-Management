@@ -1,21 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NgxBarcodeModule } from 'ngx-barcode';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { InputVisitorDetailsComponent } from './input-visitor-details/input-visitor-details.component';
-import { RequestQueueNumberComponent } from './request-queue-number/request-queue-number.component';
-import { MenuComponent } from './menu/menu.component';
-import { MaterialModule } from './tools/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './shared/tools/material.module';
 import { APP_BASE_HREF } from '@angular/common';
-import { VisitorListComponent } from './visitor-list/visitor-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomerService } from './services/customer.service';
-import { UserService } from './services/user.service';
-import { TestcaseComponent } from './testcase/testcase.component';
-import { CustomerRegisterComponent } from './input-visitor-details/customer-register/customer-register.component';
-import { NgxBarcodeModule } from 'ngx-barcode';
+
+import { AppComponent } from './app.component';
+import { InputVisitorDetailsComponent } from './route/input-visitor-details/input-visitor-details.component';
+import { RequestQueueNumberComponent } from './route/request-queue-number/request-queue-number.component';
+import { MenuComponent } from './route/menu/menu.component';
+import { VisitorListComponent } from './route/visitor-list/visitor-list.component';
+import { TestcaseComponent } from './route/testcase/testcase.component';
+import { CustomerRegisterComponent } from './route/input-visitor-details/customer-register/customer-register.component';
+
+import { CustomerService } from './shared/services/customer.service';
+import { UserService } from './shared/services/user.service';
+import { VisitorService } from './shared/services/visitor.service';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,14 @@ import { NgxBarcodeModule } from 'ngx-barcode';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxBarcodeModule
+    NgxBarcodeModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
     CustomerService,
-    UserService
+    UserService,
+    VisitorService
   ],
   bootstrap: [AppComponent]
 })

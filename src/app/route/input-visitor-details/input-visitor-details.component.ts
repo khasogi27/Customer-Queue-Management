@@ -15,12 +15,4 @@ export class InputVisitorDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onBack() {
-    this.router.navigateByUrl('/');
-  }
-
-  onSave() {
-
-  }
-
 }

@@ -28,6 +28,7 @@ export class RequestQueueNumberComponent implements OnInit {
 
   public textHead: string = 'ALMEGATEX';
   public textInfo: string = 'Nomer Antrian Anda : ';
+  public textInfo2: string = 'Mohon Menunggu';
   public dateNow = new Date().toLocaleDateString('id-ID');
   public timeNow = new Date().toLocaleTimeString('en-US');
   public textDesc: string = 'Budayakan antri untuk kenyamanan bersama Terima Kasih atas kunjungan anda';

@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
-import { User } from '../interfaces/user';
-import { UserService } from '../services/user.service';
+import { User } from '../../shared/interfaces/user';
+import { UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'app-menu',
